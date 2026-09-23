@@ -1,21 +1,57 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ABOUT, UI } from "../../lib/i18n";
 import performances from "../../data/performances.json";
 
 const VISITED_KEY = "stagepass_visited";
+const POSTER_COUNT = 24;
 
-// 넷플릭스 히어로처럼 배경에 깔 포스터 — 전체 데이터에서 고르게 24장 뽑는다.
-const HERO_POSTERS = (() => {
-  const urls = [...new Set(performances.map((p) => p.poster).filter(Boolean))];
-  const n = 24;
-  const step = urls.length / n;
-  const out = [];
-  for (let i = 0; i < n; i++) out.push(urls[Math.min(urls.length - 1, Math.floor(i * step))]);
-  return out;
+function parseDate(s) {
+  const [y, m, d] = s.split(".").map(Number);
+  return new Date(y, m - 1, d);
+}
+
+// 넷플릭스 히어로처럼 배경에 깔 포스터 후보.
+// 공연 기간이 끝난(to < 오늘) 건 자동으로 빠짐 → data/performances.json을 새로
+// 수집할 때마다(공연이 바뀔 때마다) 배경도 같이 바뀜, 코드 수정 불필요.
+// (서버/클라이언트 첫 렌더가 같아야 해서 여기서는 무작위 없이 후보만 고른다)
+const HERO_POSTER_CANDIDATES = (() => {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const candidates = [
+    ...new Set(
+      performances
+        .filter((p) => parseDate(p.to) >= today)
+        .map((p) => p.poster)
+        .filter(Boolean)
+    ),
+  ];
+  return candidates.length ? candidates : performances.map((p) => p.poster).filter(Boolean);
 })();
+
+function evenSample(pool, n) {
+  if (pool.length <= n) return pool;
+  const step = pool.length / n;
+  const out = [];
+  for (let i = 0; i < n; i++) out.push(pool[Math.min(pool.length - 1, Math.floor(i * step))]);
+  return out;
+}
+
+function shuffle(arr) {
+  const out = [...arr];
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [out[i], out[j]] = [out[j], out[i]];
+  }
+  return out;
+}
+
+// 세로로 이어붙여 위로 계속 스크롤해도 이음새 없이 반복되도록 목록을 통째로 두 번 반복
+function doubleUp(list) {
+  return [...list, ...list];
+}
 
 function markVisited() {
   try {
@@ -27,6 +63,14 @@ function markVisited() {
 
 export default function AboutPage() {
   const [lang, setLang] = useState("en");
+  // 첫 렌더(서버/클라이언트 hydration)는 항상 같은 결과가 나와야 하므로 고르게 뽑은
+  // 목록으로 시작하고, 마운트된 뒤에만 무작위로 다시 섞는다(방문할 때마다 살짝 다르게).
+  const [heroPosters, setHeroPosters] = useState(() =>
+    doubleUp(evenSample(HERO_POSTER_CANDIDATES, POSTER_COUNT))
+  );
+  useEffect(() => {
+    setHeroPosters(doubleUp(shuffle(HERO_POSTER_CANDIDATES).slice(0, POSTER_COUNT)));
+  }, []);
   const a = ABOUT[lang];
   const t = UI[lang];
 
@@ -34,11 +78,13 @@ export default function AboutPage() {
     <div className="about-page">
       <section className="hero">
         <div className="hero-bg" aria-hidden="true">
-          <div className="hero-poster-grid">
-            {HERO_POSTERS.map((url, i) => (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img key={i} src={url} alt="" loading="eager" />
-            ))}
+          <div className="hero-poster-track">
+            <div className="hero-poster-grid">
+              {heroPosters.map((url, i) => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img key={i} src={url} alt="" loading="eager" />
+              ))}
+            </div>
           </div>
           <div className="hero-overlay" />
         </div>
@@ -72,37 +118,38 @@ export default function AboutPage() {
               </Link>
             </div>
           </div>
+
+          {/* 포스터 배경이 여기까지 이어지도록 Why 카드도 히어로 안에 둔다 */}
+          <section className="intro-section intro-section-on-hero">
+            <h3 className="intro-section-title">{a.whyTitle}</h3>
+            <div className="intro-cards">
+              <div className="intro-card">
+                <span className="intro-card-icon" aria-hidden="true">
+                  ₩
+                </span>
+                <h4>{a.why1Title}</h4>
+                <p>{a.why1Body}</p>
+              </div>
+              <div className="intro-card">
+                <span className="intro-card-icon" aria-hidden="true">
+                  ✓
+                </span>
+                <h4>{a.why2Title}</h4>
+                <p>{a.why2Body}</p>
+              </div>
+              <div className="intro-card">
+                <span className="intro-card-icon" aria-hidden="true">
+                  🌐
+                </span>
+                <h4>{a.why3Title}</h4>
+                <p>{a.why3Body}</p>
+              </div>
+            </div>
+          </section>
         </div>
       </section>
 
       <div className="page">
-      <section className="intro-section">
-        <h3 className="intro-section-title">{a.whyTitle}</h3>
-        <div className="intro-cards">
-          <div className="intro-card">
-            <span className="intro-card-icon" aria-hidden="true">
-              ₩
-            </span>
-            <h4>{a.why1Title}</h4>
-            <p>{a.why1Body}</p>
-          </div>
-          <div className="intro-card">
-            <span className="intro-card-icon" aria-hidden="true">
-              ✓
-            </span>
-            <h4>{a.why2Title}</h4>
-            <p>{a.why2Body}</p>
-          </div>
-          <div className="intro-card">
-            <span className="intro-card-icon" aria-hidden="true">
-              🌐
-            </span>
-            <h4>{a.why3Title}</h4>
-            <p>{a.why3Body}</p>
-          </div>
-        </div>
-      </section>
-
       <section className="intro-section">
         <h3 className="intro-section-title">{a.howTitle}</h3>
         <ol className="intro-steps">
