@@ -75,6 +75,13 @@ select:focus-visible {
   gap: 12px;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
 .header h1 {
   font-size: 28px;
   font-weight: 700;
@@ -142,6 +149,17 @@ select:focus-visible {
   position: sticky;
   top: 8px;
   z-index: 10;
+}
+
+/* Collapse wrappers are layout-transparent above mobile so the fields stay
+   direct flex items of .search-bar; only the mobile block turns them on. */
+.filter-toggle {
+  display: none;
+}
+
+.filter-collapse,
+.filter-collapse-inner {
+  display: contents;
 }
 
 .field {
@@ -270,9 +288,94 @@ select:focus-visible {
   }
 
   .search-bar {
-    position: static;
-    padding: 12px;
+    top: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .filter-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    height: 36px;
+    padding: 0;
+    background: none;
+    border: none;
+    color: var(--krds-text);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .filter-toggle-summary {
+    flex: 1;
+    min-width: 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--krds-text-subtle);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* 펼쳐졌을 땐 필드가 직접 보이니 요약 텍스트는 접혔을 때만 노출 */
+  .filter-toggle[aria-expanded="true"] .filter-toggle-summary {
+    display: none;
+  }
+
+  .filter-toggle-icon {
+    font-size: 14px;
+    color: var(--krds-text-subtle);
+    transition: transform 300ms ease-in-out;
+  }
+
+  .filter-toggle[aria-expanded="true"] .filter-toggle-icon {
+    transform: rotate(180deg);
+  }
+
+  /* grid-template-rows 0fr↔1fr animates to the panel's natural height
+     without hard-coding a max-height. */
+  .filter-collapse {
+    display: grid;
+    grid-template-rows: 1fr;
+    transition: grid-template-rows 300ms ease-in-out;
+  }
+
+  .filter-collapse.is-collapsed {
+    grid-template-rows: 0fr;
+  }
+
+  .filter-collapse-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
     gap: 8px 10px;
+    min-height: 0;
+    overflow: hidden;
+    /* side padding keeps the 4px focus ring from being clipped */
+    margin: 0 -4px;
+    padding: 8px 4px 4px;
+    opacity: 1;
+    transition: padding 300ms ease-in-out, opacity 300ms ease-in-out, visibility 0s;
+  }
+
+  /* visibility:hidden also pulls the hidden controls out of the tab order */
+  .filter-collapse.is-collapsed .filter-collapse-inner {
+    padding: 0 4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: padding 300ms ease-in-out, opacity 300ms ease-in-out,
+      visibility 0s linear 300ms;
+  }
+
+  .result-count {
+    scroll-margin-top: 64px;
   }
 
   .field {
@@ -326,6 +429,14 @@ select:focus-visible {
   .lang-switch button {
     padding: 0 6px;
     font-size: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .filter-collapse,
+  .filter-collapse-inner,
+  .filter-toggle-icon {
+    transition: none !important;
   }
 }
 
@@ -728,4 +839,457 @@ select:focus-visible {
 
 .footer a:hover {
   color: var(--krds-primary-60);
+}
+
+/* ---- /about (서비스 소개 페이지) ---- */
+
+/* 넷플릭스 스타일 히어로: 포스터를 사선으로 깔고 위에 어두운 그라데이션 오버레이 */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: #0b0c0e;
+  isolation: isolate;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* track = 위치·회전·스크롤 애니메이션 담당, grid = 포스터 배열만 담당 (역할 분리) */
+.hero-poster-track {
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  transform: rotate(-9deg) translateY(0);
+  transform-origin: center;
+  animation: heroPosterScroll 90s linear infinite;
+  will-change: transform;
+}
+
+/* 포스터 목록을 통째로 두 번 반복해 두고(doubleUp) 정확히 그 절반 높이만큼만
+   올리면, 다시 처음과 똑같은 그림으로 이어져서 끊김 없이 계속 올라가는 것처럼 보인다 */
+@keyframes heroPosterScroll {
+  from {
+    transform: rotate(-9deg) translateY(0);
+  }
+  to {
+    transform: rotate(-9deg) translateY(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-poster-track {
+    animation: none;
+  }
+}
+
+.hero-poster-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .hero-poster-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.hero-poster-grid img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 4px;
+  opacity: 0.92;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 7, 9, 0.35) 0%,
+    rgba(6, 7, 9, 0.55) 40%,
+    rgba(6, 7, 9, 0.86) 78%,
+    #0b0c0e 100%
+  );
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 24px 56px;
+}
+
+.hero-inner .header {
+  margin-bottom: 0;
+}
+
+.hero-inner .header h1 {
+  color: #ffffff;
+}
+
+.lang-switch-on-dark {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+.lang-switch-on-dark button {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.lang-switch-on-dark button[aria-pressed="true"] {
+  background: var(--krds-primary);
+  color: #ffffff;
+}
+
+.hero-content {
+  padding-top: 64px;
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    padding-top: 96px;
+  }
+}
+
+.hero-title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 12px;
+  color: #ffffff;
+  max-width: 24ch;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 32px;
+  }
+}
+
+/* 태블릿 폭에서는 40px+nowrap이면 넘칠 수 있어서, 실제로 한 줄이 들어가는
+   폭부터만 max-width/nowrap을 푼다 */
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 40px;
+    max-width: none;
+    white-space: nowrap;
+  }
+}
+
+.hero-subtitle {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 60ch;
+  margin: 0 0 24px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* hero-title과 같은 기준: 실제로 한 줄이 들어가는 폭부터만 줄바꿈 해제 */
+@media (min-width: 1024px) {
+  .hero-subtitle {
+    max-width: none;
+    white-space: nowrap;
+  }
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-cta-primary {
+  height: 48px;
+  padding: 0 24px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.btn-tertiary-on-dark {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+}
+
+.btn-tertiary-on-dark:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.intro-section {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--krds-border-light);
+}
+
+.intro-section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--krds-text);
+  margin: 0 0 20px;
+}
+
+/* Why 카드가 히어로(다크 포스터 배경) 안에 있을 때 */
+.intro-section-on-hero {
+  border-bottom: none;
+  padding-top: 48px;
+  padding-bottom: 8px;
+}
+
+.intro-section-on-hero .intro-section-title {
+  color: #ffffff;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+}
+
+.intro-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .intro-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.intro-card {
+  border: 1px solid var(--krds-border-subtle);
+  border-radius: var(--krds-radius-md);
+  padding: 20px;
+  background: var(--krds-surface);
+}
+
+.intro-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--krds-radius-pill);
+  background: var(--krds-primary-5);
+  color: var(--krds-primary-60);
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.intro-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--krds-text);
+}
+
+.intro-card p {
+  font-size: 14px;
+  color: var(--krds-text-subtle);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.intro-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.intro-steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.intro-step-num {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--krds-radius-pill);
+  background: var(--krds-primary);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.intro-steps h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: var(--krds-text);
+}
+
+.intro-steps p {
+  font-size: 14px;
+  color: var(--krds-text-subtle);
+  margin: 0;
+}
+
+.note-box {
+  margin: 32px 0;
+  padding: 20px 24px;
+  background: var(--krds-surface-subtle);
+  border: 1px solid var(--krds-border-subtle);
+  border-radius: var(--krds-radius-md);
+}
+
+.note-box-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: var(--krds-text);
+}
+
+.note-box ul {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.note-box li {
+  font-size: 14px;
+  color: var(--krds-text-subtle);
+  line-height: 1.5;
+}
+
+.intro-cta {
+  padding: 40px 0 24px;
+  text-align: center;
+}
+
+.intro-cta h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--krds-text);
+  margin: 0 0 20px;
+}
+
+.reopen-about {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--krds-radius-pill);
+  border: 1px solid var(--krds-border-subtle);
+  background: var(--krds-surface);
+  color: var(--krds-text-subtle);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.reopen-about:hover {
+  background: var(--krds-surface-subtle);
+  color: var(--krds-text);
+}
+
+/* ---- 포커스 튜토리얼 (건너뛰기 / 이전·다음) ---- */
+
+.tutorial-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  pointer-events: none;
+}
+
+.tutorial-spotlight {
+  position: fixed;
+  border-radius: 10px;
+  box-shadow: 0 0 0 9999px rgba(6, 7, 9, 0.68);
+  pointer-events: none;
+  transition: top 200ms ease, left 200ms ease, width 200ms ease, height 200ms ease;
+}
+
+.tutorial-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 7, 9, 0.68);
+  pointer-events: auto;
+}
+
+.tutorial-tooltip {
+  position: fixed;
+  z-index: 301;
+  pointer-events: auto;
+  width: min(300px, calc(100vw - 32px));
+  background: var(--krds-surface);
+  color: var(--krds-text);
+  border-radius: var(--krds-radius-md);
+  padding: 16px 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.tutorial-tooltip-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tutorial-step-count {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--krds-primary-60);
+  margin: 0 0 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.tutorial-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--krds-text);
+}
+
+.tutorial-body {
+  font-size: 14px;
+  color: var(--krds-text-subtle);
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+
+.tutorial-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.tutorial-skip {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--krds-text-caption);
+  font-size: 13px;
+  font-family: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.tutorial-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.tutorial-nav .card-cta,
+.tutorial-nav .btn-tertiary {
+  height: 36px;
+  padding: 0 14px;
+  font-size: 14px;
 }
