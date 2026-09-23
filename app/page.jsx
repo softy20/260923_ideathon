@@ -22,6 +22,12 @@ export default function HomePage() {
   const total = getAllPerformances().length;
   const results = filterPerformances({ startDate, endDate, noKoreanNeeded });
 
+  function resetFilters() {
+    setStartDate(toInputDate(today));
+    setEndDate(toInputDate(weekLater));
+    setNoKoreanNeeded(false);
+  }
+
   return (
     <div className="page">
       <header className="header">
@@ -59,17 +65,23 @@ export default function HomePage() {
         </div>
 
         <label className="toggle">
-          <input
-            type="checkbox"
-            checked={noKoreanNeeded}
-            onChange={(e) => setNoKoreanNeeded(e.target.checked)}
-          />
           <span>No Korean needed</span>
+          <span className="toggle-control">
+            <input
+              type="checkbox"
+              className="toggle-input"
+              role="switch"
+              aria-checked={noKoreanNeeded}
+              checked={noKoreanNeeded}
+              onChange={(e) => setNoKoreanNeeded(e.target.checked)}
+            />
+            <span className="toggle-track" aria-hidden="true" />
+          </span>
         </label>
       </section>
 
       <p className="result-count">
-        Showing {results.length} of {total} performances
+        Showing <strong>{results.length}</strong> of {total} performances
         {noKoreanNeeded && " — filtered to shows you can enjoy without understanding Korean"}
       </p>
 
@@ -77,6 +89,9 @@ export default function HomePage() {
         <div className="empty-state">
           <p>No performances match these dates.</p>
           <p>Try widening your date range — most shows here run for one week or more.</p>
+          <button type="button" className="btn-tertiary" onClick={resetFilters}>
+            Reset filters
+          </button>
         </div>
       ) : (
         <div className="card-grid">

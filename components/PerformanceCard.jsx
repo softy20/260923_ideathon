@@ -46,17 +46,19 @@ export default function PerformanceCard({ performance }) {
           📍 {venueEn}
         </a>
 
-        <p className="card-price" title={priceText}>
-          from ₩{price?.toLocaleString()}
-        </p>
+        <div className="card-footer">
+          <p className="card-price" title={priceText}>
+            from ₩{price?.toLocaleString()}
+          </p>
 
-        {bookingUrl ? (
-          <a className="card-cta" href={bookingUrl} target="_blank" rel="noreferrer">
-            Book tickets →
-          </a>
-        ) : (
-          <span className="card-cta card-cta-disabled">No booking link</span>
-        )}
+          {bookingUrl ? (
+            <a className="card-cta" href={bookingUrl} target="_blank" rel="noreferrer">
+              Book tickets
+            </a>
+          ) : (
+            <span className="card-cta card-cta-disabled">No booking link</span>
+          )}
+        </div>
       </div>
     </article>
   );
