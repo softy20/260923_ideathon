@@ -965,6 +965,14 @@ select:focus-visible {
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
 }
 
+/* hero-title과 같은 기준: 실제로 한 줄이 들어가는 폭부터만 줄바꿈 해제 */
+@media (min-width: 1024px) {
+  .hero-subtitle {
+    max-width: none;
+    white-space: nowrap;
+  }
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
