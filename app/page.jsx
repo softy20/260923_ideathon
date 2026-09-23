@@ -6,6 +6,7 @@ import Link from "next/link";
 import PerformanceCard from "../components/PerformanceCard";
 import Pagination from "../components/Pagination";
 import BackToTop from "../components/BackToTop";
+import Tutorial from "../components/Tutorial";
 import {
   filterPerformances,
   getAllPerformances,
@@ -15,6 +16,7 @@ import {
 import { UI, genreNameForCode } from "../lib/i18n";
 
 const VISITED_KEY = "stagepass_visited";
+const TUTORIAL_SEEN_KEY = "stagepass_tutorial_seen";
 
 const PAGE_SIZE = 12;
 // 이 값(px)보다 더 내려가면 모바일 필터 패널을 자동으로 접고, 맨 위 근처로
@@ -49,9 +51,12 @@ export default function HomePage() {
   const t = UI[lang];
   const resultsTopRef = useRef(null);
   const router = useRouter();
+  const [tutorialActive, setTutorialActive] = useState(false);
 
   // 처음 방문한 사람은 소개 페이지(/about)를 먼저 보여준다.
   // localStorage에 방문 기록이 없을 때만, 그리고 한 번만 리다이렉트한다.
+  // 방문 기록이 있다면(또는 /about에서 "Start the tour"로 넘어온 거라면) 포커스
+  // 튜토리얼을 아직 안 봤을 때 바로 띄운다.
   useEffect(() => {
     let visited = true;
     try {
@@ -61,8 +66,30 @@ export default function HomePage() {
     }
     if (!visited) {
       router.replace("/about");
+      return;
+    }
+
+    const forceTour = new URLSearchParams(window.location.search).get("tour") === "1";
+    let tutorialSeen = true;
+    try {
+      tutorialSeen = localStorage.getItem(TUTORIAL_SEEN_KEY) === "1";
+    } catch {
+      // 위와 동일 — 못 쓰면 그냥 안 보여줌 (매번 뜨는 것보다 안전한 쪽)
+    }
+    if (forceTour || !tutorialSeen) {
+      setFiltersOpen(true); // 튜토리얼 대상(날짜/토글)이 접혀 있으면 안 되니 펼쳐둠
+      setTutorialActive(true);
     }
   }, [router]);
+
+  function closeTutorial() {
+    setTutorialActive(false);
+    try {
+      localStorage.setItem(TUTORIAL_SEEN_KEY, "1");
+    } catch {
+      // 무시 — 다음에 또 뜨는 정도의 사소한 문제
+    }
+  }
 
   const cities = useMemo(() => getAvailableCities(), []);
   const genres = useMemo(() => getAvailableGenres(), []);
@@ -82,14 +109,17 @@ export default function HomePage() {
   }, [startDate, endDate, noKoreanNeeded, city, genre]);
 
   // 스크롤을 내리면 필터 패널을 자동으로 접고, 맨 위 근처로 오면 다시 편다.
+  // 튜토리얼이 켜져 있을 때는 스포트라이트가 타겟으로 스크롤을 옮기면서 이 로직과
+  // 충돌해 필터가 접혔다 펴졌다 할 수 있어서, 튜토리얼 동안은 건너뛴다.
   useEffect(() => {
+    if (tutorialActive) return;
     function onScroll() {
       setFiltersOpen(window.scrollY < AUTO_COLLAPSE_SCROLL_Y);
     }
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [tutorialActive]);
 
   function goToPage(n) {
     setPage(n);
@@ -278,6 +308,7 @@ export default function HomePage() {
       </footer>
 
       <BackToTop />
+      {tutorialActive && <Tutorial lang={lang} onClose={closeTutorial} />}
     </div>
   );
 }
