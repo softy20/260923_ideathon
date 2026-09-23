@@ -2,7 +2,11 @@
 
 import { useMemo, useState } from "react";
 import PerformanceCard from "../components/PerformanceCard";
-import { filterPerformances, getAllPerformances } from "../lib/performances";
+import {
+  filterPerformances,
+  getAllPerformances,
+  getAvailableCities,
+} from "../lib/performances";
 
 function toInputDate(d) {
   const y = d.getFullYear();
@@ -18,14 +22,17 @@ export default function HomePage() {
   const [startDate, setStartDate] = useState(toInputDate(today));
   const [endDate, setEndDate] = useState(toInputDate(weekLater));
   const [noKoreanNeeded, setNoKoreanNeeded] = useState(false);
+  const [city, setCity] = useState("");
 
+  const cities = useMemo(() => getAvailableCities(), []);
   const total = getAllPerformances().length;
-  const results = filterPerformances({ startDate, endDate, noKoreanNeeded });
+  const results = filterPerformances({ startDate, endDate, noKoreanNeeded, city });
 
   function resetFilters() {
     setStartDate(toInputDate(today));
     setEndDate(toInputDate(weekLater));
     setNoKoreanNeeded(false);
+    setCity("");
   }
 
   return (
@@ -33,8 +40,8 @@ export default function HomePage() {
       <header className="header">
         <h1>Stage Pass Korea</h1>
         <p className="tagline">
-          Affordable, official performances in Seoul — no big musicals, just real local
-          shows under ₩50,000.
+          Affordable, official performances across Korea — no big musicals, just real
+          local shows under ₩50,000.
         </p>
       </header>
 
@@ -59,8 +66,13 @@ export default function HomePage() {
         </div>
         <div className="field">
           <label htmlFor="city">City</label>
-          <select id="city" disabled value="seoul">
-            <option value="seoul">Seoul</option>
+          <select id="city" value={city} onChange={(e) => setCity(e.target.value)}>
+            <option value="">All cities</option>
+            {cities.map((c) => (
+              <option key={c.city} value={c.city}>
+                {c.city}
+              </option>
+            ))}
           </select>
         </div>
 

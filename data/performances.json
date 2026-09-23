@@ -25,7 +25,9 @@
       }
     ],
     "runtime": "1시간 10분",
-    "age": "전체 관람가"
+    "age": "전체 관람가",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF247233",
@@ -57,7 +59,9 @@
       }
     ],
     "runtime": "55분",
-    "age": "만 16세 이상"
+    "age": "만 16세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF247431",
@@ -89,7 +93,9 @@
       }
     ],
     "runtime": "",
-    "age": "만 16세 이상"
+    "age": "만 16세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF254549",
@@ -121,7 +127,9 @@
       }
     ],
     "runtime": "50분",
-    "age": "24개월 이상"
+    "age": "24개월 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF281481",
@@ -149,7 +157,9 @@
       }
     ],
     "runtime": "1시간 20분",
-    "age": ""
+    "age": "",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF283834",
@@ -177,7 +187,9 @@
       }
     ],
     "runtime": "50분",
-    "age": "전체 관람가"
+    "age": "전체 관람가",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF281769",
@@ -217,7 +229,9 @@
       }
     ],
     "runtime": "1시간 10분",
-    "age": "만 5세 이상"
+    "age": "만 5세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF283137",
@@ -245,7 +259,9 @@
       }
     ],
     "runtime": "1시간 30분",
-    "age": "만 6세 이상"
+    "age": "만 6세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF281822",
@@ -285,7 +301,9 @@
       }
     ],
     "runtime": "1시간 20분",
-    "age": "만 7세 이상"
+    "age": "만 7세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF285499",
@@ -313,7 +331,9 @@
       }
     ],
     "runtime": "1시간 25분",
-    "age": "만 19세 이상"
+    "age": "만 19세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF287430",
@@ -341,7 +361,9 @@
       }
     ],
     "runtime": "1시간",
-    "age": "12개월 이상"
+    "age": "12개월 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF286899",
@@ -369,7 +391,9 @@
       }
     ],
     "runtime": "1시간 30분",
-    "age": "전체 관람가"
+    "age": "전체 관람가",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF291510",
@@ -397,7 +421,9 @@
       }
     ],
     "runtime": "7시간",
-    "age": "만 19세 이상"
+    "age": "만 19세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF296638",
@@ -429,7 +455,9 @@
       }
     ],
     "runtime": "50분",
-    "age": "전체 관람가"
+    "age": "전체 관람가",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF296289",
@@ -457,7 +485,9 @@
       }
     ],
     "runtime": "1시간 30분",
-    "age": "만 7세 이상"
+    "age": "만 7세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF297998",
@@ -485,7 +515,9 @@
       }
     ],
     "runtime": "1시간 40분",
-    "age": "전체 관람가"
+    "age": "전체 관람가",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF300258",
@@ -513,7 +545,9 @@
       }
     ],
     "runtime": "1시간 30분",
-    "age": "전체 관람가"
+    "age": "전체 관람가",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF301613",
@@ -541,7 +575,9 @@
       }
     ],
     "runtime": "1시간 40분",
-    "age": "만 7세 이상"
+    "age": "만 7세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF301391",
@@ -569,7 +605,9 @@
       }
     ],
     "runtime": "1시간 30분",
-    "age": "만 7세 이상"
+    "age": "만 7세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF300629",
@@ -597,7 +635,9 @@
       }
     ],
     "runtime": "1시간 20분",
-    "age": "만 6세 이상"
+    "age": "만 6세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF300496",
@@ -637,7 +677,9 @@
       }
     ],
     "runtime": "1시간 15분",
-    "age": "만 7세 이상"
+    "age": "만 7세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF300333",
@@ -665,7 +707,9 @@
       }
     ],
     "runtime": "1시간 25분",
-    "age": "만 7세 이상"
+    "age": "만 7세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF298803",
@@ -697,7 +741,9 @@
       }
     ],
     "runtime": "1시간 30분",
-    "age": "만 7세 이상"
+    "age": "만 7세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF296778",
@@ -725,7 +771,9 @@
       }
     ],
     "runtime": "1시간 30분",
-    "age": "만 7세 이상"
+    "age": "만 7세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF301084",
@@ -753,7 +801,9 @@
       }
     ],
     "runtime": "",
-    "age": "전체 관람가"
+    "age": "전체 관람가",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF301472",
@@ -781,7 +831,9 @@
       }
     ],
     "runtime": "1시간 10분",
-    "age": "만 7세 이상"
+    "age": "만 7세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF301429",
@@ -809,7 +861,9 @@
       }
     ],
     "runtime": "1시간 10분",
-    "age": "만 5세 이상"
+    "age": "만 5세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF300917",
@@ -841,7 +895,9 @@
       }
     ],
     "runtime": "1시간",
-    "age": "만 6세 이상"
+    "age": "만 6세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF299775",
@@ -869,7 +925,9 @@
       }
     ],
     "runtime": "1시간",
-    "age": "만 7세 이상"
+    "age": "만 7세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF299368",
@@ -897,7 +955,9 @@
       }
     ],
     "runtime": "1시간",
-    "age": "만 7세 이상"
+    "age": "만 7세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF300374",
@@ -925,7 +985,9 @@
       }
     ],
     "runtime": "1시간 10분",
-    "age": "만 12세 이상"
+    "age": "만 12세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF301171",
@@ -957,7 +1019,9 @@
       }
     ],
     "runtime": "1시간 40분",
-    "age": "만 11세 이상"
+    "age": "만 11세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF300754",
@@ -993,7 +1057,9 @@
       }
     ],
     "runtime": "45분",
-    "age": "36개월 이상"
+    "age": "36개월 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF300338",
@@ -1021,7 +1087,9 @@
       }
     ],
     "runtime": "1시간 20분",
-    "age": "만 11세 이상"
+    "age": "만 11세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF301046",
@@ -1053,7 +1121,9 @@
       }
     ],
     "runtime": "1시간 10분",
-    "age": "만 12세 이상"
+    "age": "만 12세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF300123",
@@ -1081,7 +1151,9 @@
       }
     ],
     "runtime": "1시간 10분",
-    "age": "만 8세 이상"
+    "age": "만 8세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF300090",
@@ -1113,7 +1185,9 @@
       }
     ],
     "runtime": "1시간 40분",
-    "age": "만 14세 이상"
+    "age": "만 14세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF301072",
@@ -1141,7 +1215,9 @@
       }
     ],
     "runtime": "1시간 40분",
-    "age": "만 7세 이상"
+    "age": "만 7세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF301368",
@@ -1181,7 +1257,9 @@
       }
     ],
     "runtime": "1시간 20분",
-    "age": "만 13세 이상"
+    "age": "만 13세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
   },
   {
     "id": "PF300923",
@@ -1209,6 +1287,1124 @@
       }
     ],
     "runtime": "1시간 20분",
-    "age": "만 13세 이상"
+    "age": "만 13세 이상",
+    "city": "Seoul",
+    "cityKo": "서울"
+  },
+  {
+    "id": "PF277103",
+    "nameKo": "토들러 콘서트 [하우스오브베르]",
+    "nameEn": "Toddler Concert [House of Verre]",
+    "venueKo": "하우스오브베르",
+    "venueEn": "House of Verre",
+    "mapsQuery": "하우스오브베르 부산",
+    "dateDisplay": "토요일(11:00), 일요일(16:00)",
+    "isRecurring": true,
+    "from": "2025.02.15",
+    "to": "2026.10.24",
+    "showTime": "토요일(11:00), 일요일(16:00)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF277103_251023_113338.jpg",
+    "price": 30000,
+    "priceText": "전석 30,000원",
+    "genreCode": "CCCA",
+    "genreEn": "Classical Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "https://booking.naver.com/booking/12/bizes/1289530",
+    "bookingLinks": [
+      {
+        "name": "네이버N예약",
+        "url": "https://booking.naver.com/booking/12/bizes/1289530"
+      }
+    ],
+    "runtime": "50분",
+    "age": "전체 관람가",
+    "city": "Busan",
+    "cityKo": "부산"
+  },
+  {
+    "id": "PF293251",
+    "nameKo": "리온의 신비한 과자상점 [부산]",
+    "nameEn": "Rion's Mysterious Candy Shop [Busan]",
+    "venueKo": "가온아트홀 [부산]",
+    "venueEn": "Gaon Art Hall [Busan]",
+    "mapsQuery": "가온아트홀 [부산] 부산",
+    "dateDisplay": "토요일(11:00,13:00), 일요일(11:00)",
+    "isRecurring": true,
+    "from": "2026.06.27",
+    "to": "2026.12.26",
+    "showTime": "토요일(11:00,13:00), 일요일(11:00)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF293251_260610_113230.jpg",
+    "price": 30000,
+    "priceText": "전석 30,000원",
+    "genreCode": "EEEB",
+    "genreEn": "Circus / Magic",
+    "noKoreanNeeded": true,
+    "bookingUrl": "https://timeticket.co.kr/product/6645",
+    "bookingLinks": [
+      {
+        "name": "타임티켓",
+        "url": "https://timeticket.co.kr/product/6645"
+      }
+    ],
+    "runtime": "50분",
+    "age": "전체 관람가",
+    "city": "Busan",
+    "cityKo": "부산"
+  },
+  {
+    "id": "PF295487",
+    "nameKo": "초록 마술사의 아쿠아 버블쇼 [부산]",
+    "nameEn": "Green Magician's Aqua Bubble Show [Busan]",
+    "venueKo": "초록마술극장",
+    "venueEn": "Green Magic Theater",
+    "mapsQuery": "초록마술극장 부산",
+    "dateDisplay": "2026.08.15 ~ 2026.09.27",
+    "isRecurring": false,
+    "from": "2026.08.15",
+    "to": "2026.09.27",
+    "showTime": "토요일(13:00), 일요일(11:00)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF295487_260707_111120.jpg",
+    "price": 30000,
+    "priceText": "전석 30,000원",
+    "genreCode": "EEEB",
+    "genreEn": "Circus / Magic",
+    "noKoreanNeeded": true,
+    "bookingUrl": "https://booking.naver.com/booking/12/bizes/579261",
+    "bookingLinks": [
+      {
+        "name": "네이버N예약",
+        "url": "https://booking.naver.com/booking/12/bizes/579261"
+      }
+    ],
+    "runtime": "50분",
+    "age": "24개월 이상",
+    "city": "Busan",
+    "cityKo": "부산"
+  },
+  {
+    "id": "PF299229",
+    "nameKo": "ONE HOUR [부산] (9월)",
+    "nameEn": "ONE HOUR [Busan] (September)",
+    "venueKo": "KT&G 상상마당 라이브홀 [부산]",
+    "venueEn": "KT&G Sangsangmadang Live Hall [Busan]",
+    "mapsQuery": "KT&G 상상마당 라이브홀 [부산] 부산",
+    "dateDisplay": "2026.09.04 ~ 2026.09.25",
+    "isRecurring": false,
+    "from": "2026.09.04",
+    "to": "2026.09.25",
+    "showTime": "금요일(19:00)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF299229_260824_142620.png",
+    "price": 10000,
+    "priceText": "전석 10,000원",
+    "genreCode": "CCCD",
+    "genreEn": "Popular Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "https://ticket.melon.com/performance/index.htm?prodId=213789",
+    "bookingLinks": [
+      {
+        "name": "멜론티켓",
+        "url": "https://ticket.melon.com/performance/index.htm?prodId=213789"
+      }
+    ],
+    "runtime": "1시간",
+    "age": "만 14세 이상",
+    "city": "Busan",
+    "cityKo": "부산"
+  },
+  {
+    "id": "PF299446",
+    "nameKo": "바로크 앙상블 동백 음악의 정원 시리즈 VII, 제비꽃: Miserere [부산]",
+    "nameEn": "Baroque Ensemble Dongbaek 'Garden of Music' Series VII — Violet: Miserere [Busan]",
+    "venueKo": "부산콘서트홀",
+    "venueEn": "Busan Concert Hall",
+    "mapsQuery": "부산콘서트홀 부산",
+    "dateDisplay": "2026.09.23",
+    "isRecurring": false,
+    "from": "2026.09.23",
+    "to": "2026.09.23",
+    "showTime": "수요일(19:30)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF299446_260827_100710.jpg",
+    "price": 30000,
+    "priceText": "전석 30,000원",
+    "genreCode": "CCCA",
+    "genreEn": "Classical Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "https://classicbusan.busan.go.kr/product/performance/253308",
+    "bookingLinks": [
+      {
+        "name": "부산콘서트홀",
+        "url": "https://classicbusan.busan.go.kr/product/performance/253308"
+      }
+    ],
+    "runtime": "1시간 30분",
+    "age": "만 7세 이상",
+    "city": "Busan",
+    "cityKo": "부산"
+  },
+  {
+    "id": "PF286294",
+    "nameKo": "영화의전당 BCC 시네라이브, 11시 영화음악콘서트: 컨템포러리 필름뮤직 [부산] (9월)",
+    "nameEn": "Busan Cinema Center BCC Cine-Live: 11am Film Music Concert [Busan] (Sep)",
+    "venueKo": "(재) 영화의전당",
+    "venueEn": "Busan Cinema Center",
+    "mapsQuery": "(재) 영화의전당 부산",
+    "dateDisplay": "2026.09.23",
+    "isRecurring": false,
+    "from": "2026.09.23",
+    "to": "2026.09.23",
+    "showTime": "수요일(11:00)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF286294_260304_150850.jpg",
+    "price": 20000,
+    "priceText": "전석 20,000원",
+    "genreCode": "CCCA",
+    "genreEn": "Classical Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?GoodsCode=26003139",
+    "bookingLinks": [
+      {
+        "name": "놀유니버스",
+        "url": "http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?GoodsCode=26003139"
+      },
+      {
+        "name": "영화의전당",
+        "url": "http://www.dureraum.org/bcc/ccontents/view.do?rbsIdx=40&contentsCode=20260224006"
+      }
+    ],
+    "runtime": "1시간 10분",
+    "age": "만 7세 이상",
+    "city": "Busan",
+    "cityKo": "부산"
+  },
+  {
+    "id": "PF299672",
+    "nameKo": "지브리 하우스 콘서트: 가을이 시작하는 날 [부산]",
+    "nameEn": "Ghibli House Concert: The Day Autumn Begins [Busan]",
+    "venueKo": "첼리스트의 서재",
+    "venueEn": "The Cellist's Study",
+    "mapsQuery": "첼리스트의 서재 부산",
+    "dateDisplay": "2026.09.27",
+    "isRecurring": false,
+    "from": "2026.09.27",
+    "to": "2026.09.27",
+    "showTime": "일요일(15:00)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF299672_260831_104901.jpg",
+    "price": 30000,
+    "priceText": "전석 30,000원",
+    "genreCode": "CCCA",
+    "genreEn": "Classical Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "http://www.ticketlink.co.kr/product/64805",
+    "bookingLinks": [
+      {
+        "name": "NHN티켓링크",
+        "url": "http://www.ticketlink.co.kr/product/64805"
+      },
+      {
+        "name": "네이버N예약",
+        "url": "https://booking.naver.com/booking/12/bizes/1712302"
+      },
+      {
+        "name": "놀유니버스",
+        "url": "http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?GoodsCode=26011492"
+      }
+    ],
+    "runtime": "1시간 30분",
+    "age": "만 5세 이상",
+    "city": "Busan",
+    "cityKo": "부산"
+  },
+  {
+    "id": "PF299851",
+    "nameKo": "제94회 예술공감, Classic Playlist: 내가 사랑한 클래식 음악 [부산]",
+    "nameEn": "94th Art Empathy: Classic Playlist [Busan]",
+    "venueKo": "을숙도문화회관",
+    "venueEn": "Eulsukdo Culture Center",
+    "mapsQuery": "을숙도문화회관 부산",
+    "dateDisplay": "2026.09.29",
+    "isRecurring": false,
+    "from": "2026.09.29",
+    "to": "2026.09.29",
+    "showTime": "화요일(19:00)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF299851_260901_142618.jpg",
+    "price": 10000,
+    "priceText": "전석 10,000원",
+    "genreCode": "CCCA",
+    "genreEn": "Classical Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "https://www.nanumticket.or.kr/pe/detail.html?p_marking=&p_new=&start2=0&page_no2=1&p_idx=14005",
+    "bookingLinks": [
+      {
+        "name": "나눔티켓",
+        "url": "https://www.nanumticket.or.kr/pe/detail.html?p_marking=&p_new=&start2=0&page_no2=1&p_idx=14005"
+      },
+      {
+        "name": "을숙도문화회관",
+        "url": "https://esd.moonhwain.net:451/rsvc/rsv_pm.html?b_id=esd&p_idx=434"
+      }
+    ],
+    "runtime": "1시간 10분",
+    "age": "만 7세 이상",
+    "city": "Busan",
+    "cityKo": "부산"
+  },
+  {
+    "id": "PF299719",
+    "nameKo": "이명진 첼로 리사이틀 [부산]",
+    "nameEn": "Lee Myeong-jin Cello Recital [Busan]",
+    "venueKo": "부산문화회관",
+    "venueEn": "Busan Culture Center",
+    "mapsQuery": "부산문화회관 부산",
+    "dateDisplay": "2026.09.30",
+    "isRecurring": false,
+    "from": "2026.09.30",
+    "to": "2026.09.30",
+    "showTime": "수요일(19:30)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF299719_260831_133313.gif",
+    "price": 20000,
+    "priceText": "전석 20,000원",
+    "genreCode": "CCCA",
+    "genreEn": "Classical Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "http://www.ticketlink.co.kr/product/65140",
+    "bookingLinks": [
+      {
+        "name": "NHN티켓링크",
+        "url": "http://www.ticketlink.co.kr/product/65140"
+      },
+      {
+        "name": "네이버N예약",
+        "url": "https://booking.naver.com/booking/12/bizes/1722313"
+      },
+      {
+        "name": "놀유니버스",
+        "url": "http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?GoodsCode=26012413"
+      }
+    ],
+    "runtime": "1시간 30분",
+    "age": "만 7세 이상",
+    "city": "Busan",
+    "cityKo": "부산"
+  },
+  {
+    "id": "PF299325",
+    "nameKo": "영도문화예술회관 수요상설 onStage, 숨: 노래하다 [부산]",
+    "nameEn": "Yeongdo Arts Center Wednesday Series: Breath — To Sing [Busan]",
+    "venueKo": "영도문화예술회관",
+    "venueEn": "Yeongdo Arts Center",
+    "mapsQuery": "영도문화예술회관 부산",
+    "dateDisplay": "2026.09.30",
+    "isRecurring": false,
+    "from": "2026.09.30",
+    "to": "2026.09.30",
+    "showTime": "수요일(19:30)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF299325_260825_130615.jpg",
+    "price": 10000,
+    "priceText": "전석 10,000원",
+    "genreCode": "CCCC",
+    "genreEn": "Korean Traditional Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "https://yeongdo.moonhwain.net:451/rsvc/rsv_pm.html?b_id=yeongdo&p_idx=260",
+    "bookingLinks": [
+      {
+        "name": "영도문화예술회관",
+        "url": "https://yeongdo.moonhwain.net:451/rsvc/rsv_pm.html?b_id=yeongdo&p_idx=260"
+      },
+      {
+        "name": "예스24",
+        "url": "https://ticket.yes24.com/Perf/59878"
+      }
+    ],
+    "runtime": "1시간 30분",
+    "age": "만 7세 이상",
+    "city": "Busan",
+    "cityKo": "부산"
+  },
+  {
+    "id": "PF248820",
+    "nameKo": "우리가 사랑한 한국 영화 OST 콘서트 [대구]",
+    "nameEn": "Korean Film OSTs We Loved: A Concert [Daegu]",
+    "venueKo": "스테이지엠 (STAGE M) (구.프란츠홀)",
+    "venueEn": "STAGE M (formerly Franz Hall)",
+    "mapsQuery": "스테이지엠 (STAGE M) (구.프란츠홀) 대구",
+    "dateDisplay": "토요일(19:00), 일요일(17:30)",
+    "isRecurring": true,
+    "from": "2024.11.09",
+    "to": "2026.11.22",
+    "showTime": "토요일(19:00), 일요일(17:30)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF248820_241223_114124.jpg",
+    "price": 33000,
+    "priceText": "전석 33,000원",
+    "genreCode": "CCCA",
+    "genreEn": "Classical Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "http://www.ticketlink.co.kr/product/51830",
+    "bookingLinks": [
+      {
+        "name": "NHN티켓링크",
+        "url": "http://www.ticketlink.co.kr/product/51830"
+      },
+      {
+        "name": "네이버N예약",
+        "url": "https://booking.naver.com/booking/12/bizes/1226966"
+      },
+      {
+        "name": "놀유니버스",
+        "url": "http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?GoodsCode=26000744"
+      }
+    ],
+    "runtime": "1시간 10분",
+    "age": "만 7세 이상",
+    "city": "Daegu",
+    "cityKo": "대구"
+  },
+  {
+    "id": "PF256370",
+    "nameKo": "스테이지 M 신년 음악회: 캔들데이 콘서트 [대구]",
+    "nameEn": "STAGE M New Year Concert: Candle Day [Daegu]",
+    "venueKo": "스테이지엠 (STAGE M) (구.프란츠홀)",
+    "venueEn": "STAGE M (formerly Franz Hall)",
+    "mapsQuery": "스테이지엠 (STAGE M) (구.프란츠홀) 대구",
+    "dateDisplay": "금요일(19:30), 토요일(19:30), 일요일(15:00)",
+    "isRecurring": true,
+    "from": "2025.01.17",
+    "to": "2026.12.27",
+    "showTime": "금요일(19:30), 토요일(19:30), 일요일(15:00)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF256370_250108_161156.gif",
+    "price": 35000,
+    "priceText": "R석 45,000원, S석 35,000원",
+    "genreCode": "CCCA",
+    "genreEn": "Classical Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "http://www.ticketlink.co.kr/product/53912",
+    "bookingLinks": [
+      {
+        "name": "NHN티켓링크",
+        "url": "http://www.ticketlink.co.kr/product/53912"
+      },
+      {
+        "name": "네이버N예약",
+        "url": "https://booking.naver.com/booking/12/bizes/1323638"
+      },
+      {
+        "name": "놀유니버스",
+        "url": "http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?GoodsCode=26001485"
+      }
+    ],
+    "runtime": "1시간 20분",
+    "age": "만 6세 이상",
+    "city": "Daegu",
+    "cityKo": "대구"
+  },
+  {
+    "id": "PF274143",
+    "nameKo": "스테이지엠 크리스마스 영화 음악 & 캐롤 콘서트 [대구]",
+    "nameEn": "STAGE M Christmas Film Music & Carol Concert [Daegu]",
+    "venueKo": "스테이지엠 (STAGE M) (구.프란츠홀)",
+    "venueEn": "STAGE M (formerly Franz Hall)",
+    "mapsQuery": "스테이지엠 (STAGE M) (구.프란츠홀) 대구",
+    "dateDisplay": "토요일(14:30,17:00,18:00), 일요일(14:30,17:00), 수요일(18:00,20:00)",
+    "isRecurring": true,
+    "from": "2025.12.06",
+    "to": "2026.12.25",
+    "showTime": "토요일(14:30,17:00,18:00), 일요일(14:30,17:00), 수요일(18:00,20:00)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF274143_251128_134208.gif",
+    "price": 35000,
+    "priceText": "전석 35,000원",
+    "genreCode": "CCCA",
+    "genreEn": "Classical Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "http://www.ticketlink.co.kr/product/58396",
+    "bookingLinks": [
+      {
+        "name": "NHN티켓링크",
+        "url": "http://www.ticketlink.co.kr/product/58396"
+      },
+      {
+        "name": "네이버N예약",
+        "url": "https://booking.naver.com/booking/12/bizes/1514896"
+      },
+      {
+        "name": "놀유니버스",
+        "url": "http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?GoodsCode=26001637"
+      }
+    ],
+    "runtime": "1시간 20분",
+    "age": "만 4세 이상",
+    "city": "Daegu",
+    "cityKo": "대구"
+  },
+  {
+    "id": "PF295351",
+    "nameKo": "지브리 하우스 콘서트: 그 여름날의 계곡 [대구]",
+    "nameEn": "Ghibli House Concert: The Valley of That Summer Day [Daegu]",
+    "venueKo": "어연히하우스",
+    "venueEn": "Eoyeonhi House",
+    "mapsQuery": "어연히하우스 대구",
+    "dateDisplay": "화요일(19:30)",
+    "isRecurring": true,
+    "from": "2026.07.07",
+    "to": "2026.10.20",
+    "showTime": "화요일(19:30)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF295351_260706_110409.gif",
+    "price": 30000,
+    "priceText": "전석 30,000원",
+    "genreCode": "CCCA",
+    "genreEn": "Classical Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "http://www.ticketlink.co.kr/product/64181",
+    "bookingLinks": [
+      {
+        "name": "NHN티켓링크",
+        "url": "http://www.ticketlink.co.kr/product/64181"
+      },
+      {
+        "name": "네이버N예약",
+        "url": "https://booking.naver.com/booking/12/bizes/1687746"
+      },
+      {
+        "name": "놀유니버스",
+        "url": "http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?GoodsCode=26009595"
+      }
+    ],
+    "runtime": "1시간 30분",
+    "age": "만 5세 이상",
+    "city": "Daegu",
+    "cityKo": "대구"
+  },
+  {
+    "id": "PF295594",
+    "nameKo": "지브리 하우스 콘서트: 바다와 함께하는 여름 [대구]",
+    "nameEn": "Ghibli House Concert: A Summer with the Sea [Daegu]",
+    "venueKo": "어연히하우스",
+    "venueEn": "Eoyeonhi House",
+    "mapsQuery": "어연히하우스 대구",
+    "dateDisplay": "화요일(19:30)",
+    "isRecurring": true,
+    "from": "2026.07.14",
+    "to": "2026.10.27",
+    "showTime": "화요일(19:30)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF295594_260708_130516.gif",
+    "price": 30000,
+    "priceText": "전석 30,000원",
+    "genreCode": "CCCA",
+    "genreEn": "Classical Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "https://booking.naver.com/booking/12/bizes/1687774",
+    "bookingLinks": [
+      {
+        "name": "네이버N예약",
+        "url": "https://booking.naver.com/booking/12/bizes/1687774"
+      },
+      {
+        "name": "놀유니버스",
+        "url": "http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?GoodsCode=26009600"
+      }
+    ],
+    "runtime": "1시간 30분",
+    "age": "만 5세 이상",
+    "city": "Daegu",
+    "cityKo": "대구"
+  },
+  {
+    "id": "PF300042",
+    "nameKo": "대구메세나협회 창립 3주년 기념, 대구 클라리넷 앙상블 정기연주회",
+    "nameEn": "Daegu Clarinet Ensemble Regular Concert (3rd Anniversary)",
+    "venueKo": "대구콘서트하우스",
+    "venueEn": "Daegu Concert House",
+    "mapsQuery": "대구콘서트하우스 대구",
+    "dateDisplay": "2026.09.29",
+    "isRecurring": false,
+    "from": "2026.09.29",
+    "to": "2026.09.29",
+    "showTime": "화요일(19:30)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF300042_260903_130737.jpg",
+    "price": 20000,
+    "priceText": "전석 20,000원",
+    "genreCode": "CCCA",
+    "genreEn": "Classical Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "http://www.ticketlink.co.kr/product/65358",
+    "bookingLinks": [
+      {
+        "name": "NHN티켓링크",
+        "url": "http://www.ticketlink.co.kr/product/65358"
+      }
+    ],
+    "runtime": "1시간 30분",
+    "age": "만 6세 이상",
+    "city": "Daegu",
+    "cityKo": "대구"
+  },
+  {
+    "id": "PF295324",
+    "nameKo": "박성근 첼로 독주회 [대구]",
+    "nameEn": "Park Seong-geun Cello Recital [Daegu]",
+    "venueKo": "대구콘서트하우스",
+    "venueEn": "Daegu Concert House",
+    "mapsQuery": "대구콘서트하우스 대구",
+    "dateDisplay": "2026.09.29",
+    "isRecurring": false,
+    "from": "2026.09.29",
+    "to": "2026.09.29",
+    "showTime": "화요일(19:30)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF295324_260703_145947.jpg",
+    "price": 20000,
+    "priceText": "전석 20,000원",
+    "genreCode": "CCCA",
+    "genreEn": "Classical Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "http://www.ticketlink.co.kr/product/64191",
+    "bookingLinks": [
+      {
+        "name": "NHN티켓링크",
+        "url": "http://www.ticketlink.co.kr/product/64191"
+      },
+      {
+        "name": "네이버N예약",
+        "url": "https://booking.naver.com/booking/12/bizes/1688011"
+      }
+    ],
+    "runtime": "1시간 30분",
+    "age": "만 7세 이상",
+    "city": "Daegu",
+    "cityKo": "대구"
+  },
+  {
+    "id": "PF299991",
+    "nameKo": "이현경의 살롱드같음 시즌2: 첼리스트 김혜준 [대구]",
+    "nameEn": "Salon de Gateum Season 2: Cellist Kim Hye-jun [Daegu]",
+    "venueKo": "더같음",
+    "venueEn": "The Gateum",
+    "mapsQuery": "더같음 대구",
+    "dateDisplay": "2026.09.30",
+    "isRecurring": false,
+    "from": "2026.09.30",
+    "to": "2026.09.30",
+    "showTime": "수요일(19:30)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF299991_260902_172556.jpg",
+    "price": 20000,
+    "priceText": "전석 20,000원",
+    "genreCode": "CCCA",
+    "genreEn": "Classical Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "https://booking.naver.com/booking/5/bizes/1696944",
+    "bookingLinks": [
+      {
+        "name": "네이버N예약",
+        "url": "https://booking.naver.com/booking/5/bizes/1696944"
+      }
+    ],
+    "runtime": "1시간",
+    "age": "전체 관람가",
+    "city": "Daegu",
+    "cityKo": "대구"
+  },
+  {
+    "id": "PF291937",
+    "nameKo": "수성르네상스 프로젝트, 젊은 예술가 리사이틀 Ⅴ. 박연우 피아노 리사이틀: 사유와 격정",
+    "nameEn": "Suseong Renaissance Project — Young Artist Recital V: Park Yeon-woo Piano Recital",
+    "venueKo": "수성아트피아",
+    "venueEn": "Suseong Artpia",
+    "mapsQuery": "수성아트피아 대구",
+    "dateDisplay": "2026.09.30",
+    "isRecurring": false,
+    "from": "2026.09.30",
+    "to": "2026.09.30",
+    "showTime": "수요일(19:30)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF291937_260521_112414.jpg",
+    "price": 10000,
+    "priceText": "전석 10,000원",
+    "genreCode": "CCCA",
+    "genreEn": "Classical Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "http://www.ticketlink.co.kr/product/63273",
+    "bookingLinks": [
+      {
+        "name": "NHN티켓링크",
+        "url": "http://www.ticketlink.co.kr/product/63273"
+      },
+      {
+        "name": "네이버N예약",
+        "url": "https://booking.naver.com/booking/12/bizes/1658003"
+      }
+    ],
+    "runtime": "1시간 10분",
+    "age": "만 7세 이상",
+    "city": "Daegu",
+    "cityKo": "대구"
+  },
+  {
+    "id": "PF282994",
+    "nameKo": "한상민의 매직쇼",
+    "nameEn": "Han Sang-min's Magic Show [Incheon]",
+    "venueKo": "루시드아트홀",
+    "venueEn": "Lucid Art Hall",
+    "mapsQuery": "루시드아트홀 인천",
+    "dateDisplay": "토요일 ~ 일요일(14:00)",
+    "isRecurring": true,
+    "from": "2026.02.07",
+    "to": "2026.12.27",
+    "showTime": "토요일 ~ 일요일(14:00)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF282994_260112_142805.jpg",
+    "price": 35000,
+    "priceText": "전석 35,000원",
+    "genreCode": "EEEB",
+    "genreEn": "Circus / Magic",
+    "noKoreanNeeded": true,
+    "bookingUrl": "https://booking.naver.com/booking/5/bizes/1565289",
+    "bookingLinks": [
+      {
+        "name": "네이버N예약",
+        "url": "https://booking.naver.com/booking/5/bizes/1565289"
+      }
+    ],
+    "runtime": "1시간",
+    "age": "만 3세 이상",
+    "city": "Incheon",
+    "cityKo": "인천"
+  },
+  {
+    "id": "PF286856",
+    "nameKo": "마술집 [인천]",
+    "nameEn": "The Magic House [Incheon]",
+    "venueKo": "카페와안",
+    "venueEn": "Cafe Wa-an",
+    "mapsQuery": "카페와안 인천",
+    "dateDisplay": "금요일(20:00), 일요일(16:00)",
+    "isRecurring": true,
+    "from": "2026.03.27",
+    "to": "2026.12.25",
+    "showTime": "금요일(20:00), 일요일(16:00)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF286856_260311_141715.gif",
+    "price": 20000,
+    "priceText": "전석 20,000원",
+    "genreCode": "EEEB",
+    "genreEn": "Circus / Magic",
+    "noKoreanNeeded": true,
+    "bookingUrl": "http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?GoodsCode=26002168",
+    "bookingLinks": [
+      {
+        "name": "놀유니버스",
+        "url": "http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?GoodsCode=26002168"
+      }
+    ],
+    "runtime": "1시간 20분",
+    "age": "만 19세 이상",
+    "city": "Incheon",
+    "cityKo": "인천"
+  },
+  {
+    "id": "PF297251",
+    "nameKo": "홀릭 [인천]",
+    "nameEn": "Holic [Incheon]",
+    "venueKo": "인천어린이과학관",
+    "venueEn": "Incheon Children's Science Museum",
+    "mapsQuery": "인천어린이과학관 인천",
+    "dateDisplay": "2026.08.17 ~ 2026.09.27",
+    "isRecurring": false,
+    "from": "2026.08.17",
+    "to": "2026.09.27",
+    "showTime": "토요일 ~ 일요일(11:00,14:00), HOL(14:00,16:00)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF297251_260730_100904.gif",
+    "price": 35000,
+    "priceText": "전석 35,000원",
+    "genreCode": "EEEB",
+    "genreEn": "Circus / Magic",
+    "noKoreanNeeded": true,
+    "bookingUrl": "https://nanumticket.or.kr/pe/detail.html?p_marking=&p_new=&start2=0&page_no2=1&p_idx=13880",
+    "bookingLinks": [
+      {
+        "name": "나눔티켓",
+        "url": "https://nanumticket.or.kr/pe/detail.html?p_marking=&p_new=&start2=0&page_no2=1&p_idx=13880"
+      },
+      {
+        "name": "네이버N예약",
+        "url": "https://booking.naver.com/booking/12/bizes/1707693"
+      },
+      {
+        "name": "놀유니버스",
+        "url": "http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?GoodsCode=26011031"
+      },
+      {
+        "name": "타임티켓",
+        "url": "https://timeticket.co.kr/product/7299"
+      }
+    ],
+    "runtime": "55분",
+    "age": "20개월 이상",
+    "city": "Incheon",
+    "cityKo": "인천"
+  },
+  {
+    "id": "PF300274",
+    "nameKo": "버블제이의 매직카바레 with 세르지오 [인천]",
+    "nameEn": "Bubble J's Magic Cabaret with Sergio [Incheon]",
+    "venueKo": "송도 건원테크노큐브",
+    "venueEn": "Songdo Geonwon Technocube",
+    "mapsQuery": "송도 건원테크노큐브 인천",
+    "dateDisplay": "금요일(10:00), 토요일 ~ 일요일(12:00,14:00), HOL(12:00,14:00)",
+    "isRecurring": true,
+    "from": "2026.09.01",
+    "to": "2026.10.25",
+    "showTime": "금요일(10:00), 토요일 ~ 일요일(12:00,14:00), HOL(12:00,14:00)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF300274_260907_134359.png",
+    "price": 40000,
+    "priceText": "전석 40,000원",
+    "genreCode": "EEEB",
+    "genreEn": "Circus / Magic",
+    "noKoreanNeeded": true,
+    "bookingUrl": "https://booking.naver.com/booking/12/bizes/958547",
+    "bookingLinks": [
+      {
+        "name": "네이버N예약",
+        "url": "https://booking.naver.com/booking/12/bizes/958547"
+      }
+    ],
+    "runtime": "55분",
+    "age": "전체 관람가",
+    "city": "Incheon",
+    "cityKo": "인천"
+  },
+  {
+    "id": "PF299911",
+    "nameKo": "버블 J의 언빌리버블쇼 with 세르지오 [인천]",
+    "nameEn": "Bubble J's Unbelievable Show with Sergio [Incheon]",
+    "venueKo": "송도 건원테크노큐브",
+    "venueEn": "Songdo Geonwon Technocube",
+    "mapsQuery": "송도 건원테크노큐브 인천",
+    "dateDisplay": "2026.09.01 ~ 2026.09.27",
+    "isRecurring": false,
+    "from": "2026.09.01",
+    "to": "2026.09.27",
+    "showTime": "토요일 ~ 일요일(12:00,14:00), HOL(12:00,14:00)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF299911_260902_141755.png",
+    "price": 40000,
+    "priceText": "전석 40,000원",
+    "genreCode": "EEEB",
+    "genreEn": "Circus / Magic",
+    "noKoreanNeeded": true,
+    "bookingUrl": "https://booking.naver.com/booking/12/bizes/958547",
+    "bookingLinks": [
+      {
+        "name": "네이버N예약",
+        "url": "https://booking.naver.com/booking/12/bizes/958547"
+      }
+    ],
+    "runtime": "55분",
+    "age": "전체 관람가",
+    "city": "Incheon",
+    "cityKo": "인천"
+  },
+  {
+    "id": "PF299811",
+    "nameKo": "피노키오 [인천]",
+    "nameEn": "Pinocchio [Incheon]",
+    "venueKo": "운율북클래식",
+    "venueEn": "Unyulbook Classic",
+    "mapsQuery": "운율북클래식 인천",
+    "dateDisplay": "2026.09.19 ~ 2026.10.03",
+    "isRecurring": false,
+    "from": "2026.09.19",
+    "to": "2026.10.03",
+    "showTime": "토요일(10:00,11:30)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF299811_260901_112300.png",
+    "price": 38000,
+    "priceText": "전석 38,000원",
+    "genreCode": "CCCA",
+    "genreEn": "Classical Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "https://booking.naver.com/booking/12/bizes/1653635",
+    "bookingLinks": [
+      {
+        "name": "네이버N예약",
+        "url": "https://booking.naver.com/booking/12/bizes/1653635"
+      }
+    ],
+    "runtime": "50분",
+    "age": "전체 관람가",
+    "city": "Incheon",
+    "cityKo": "인천"
+  },
+  {
+    "id": "PF297585",
+    "nameKo": "커피콘서트 Ⅶ. 창작판소리: 음메-기살아!",
+    "nameEn": "Coffee Concert VII — Creative Pansori: 'Moo, Rise Up!' [Incheon]",
+    "venueKo": "인천문화예술회관",
+    "venueEn": "Incheon Culture & Arts Center",
+    "mapsQuery": "인천문화예술회관 인천",
+    "dateDisplay": "2026.09.23",
+    "isRecurring": false,
+    "from": "2026.09.23",
+    "to": "2026.09.23",
+    "showTime": "수요일(14:00)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF297585_260804_101853.png",
+    "price": 15000,
+    "priceText": "전석 15,000원",
+    "genreCode": "CCCC",
+    "genreEn": "Korean Traditional Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "https://nanumticket.or.kr/pe/detail.html?p_marking=&p_new=&start2=0&page_no2=1&p_idx=13892",
+    "bookingLinks": [
+      {
+        "name": "나눔티켓",
+        "url": "https://nanumticket.or.kr/pe/detail.html?p_marking=&p_new=&start2=0&page_no2=1&p_idx=13892"
+      },
+      {
+        "name": "놀유니버스",
+        "url": "https://tickets.interpark.com/goods/26011234"
+      },
+      {
+        "name": "엔티켓",
+        "url": "https://www.enticket.com:469/pfm/sub01_view.html?p_idx=4323"
+      },
+      {
+        "name": "인천문화예술회관",
+        "url": "https://www.incheon.go.kr/art/ART010101/view?resveProgrmSeCode=C&resveGroupSn=5&progrmSn=10858"
+      }
+    ],
+    "runtime": "1시간",
+    "age": "만 7세 이상",
+    "city": "Incheon",
+    "cityKo": "인천"
+  },
+  {
+    "id": "PF301000",
+    "nameKo": "정가의 멋!과 향기 풍류에 취하다 [인천]",
+    "nameEn": "The Elegance of Jeongga — Drunk on Refined Taste [Incheon]",
+    "venueKo": "국악전용극장 잔치마당",
+    "venueEn": "Janchimadang Gugak Theater",
+    "mapsQuery": "국악전용극장 잔치마당 인천",
+    "dateDisplay": "2026.09.30",
+    "isRecurring": false,
+    "from": "2026.09.30",
+    "to": "2026.09.30",
+    "showTime": "수요일(19:00)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF301000_260915_143419.jpg",
+    "price": 10000,
+    "priceText": "전석 10,000원",
+    "genreCode": "CCCC",
+    "genreEn": "Korean Traditional Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "https://booking.naver.com/booking/5/bizes/1730900",
+    "bookingLinks": [
+      {
+        "name": "네이버N예약",
+        "url": "https://booking.naver.com/booking/5/bizes/1730900"
+      }
+    ],
+    "runtime": "1시간",
+    "age": "전체 관람가",
+    "city": "Incheon",
+    "cityKo": "인천"
+  },
+  {
+    "id": "PF300202",
+    "nameKo": "새판울림 [인천]",
+    "nameEn": "New Pan-ulim [Incheon]",
+    "venueKo": "부평아트센터",
+    "venueEn": "Bupyeong Art Center",
+    "mapsQuery": "부평아트센터 인천",
+    "dateDisplay": "2026.09.30",
+    "isRecurring": false,
+    "from": "2026.09.30",
+    "to": "2026.09.30",
+    "showTime": "수요일(19:30)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF300202_260907_102910.gif",
+    "price": 10000,
+    "priceText": "전석 10,000원",
+    "genreCode": "CCCC",
+    "genreEn": "Korean Traditional Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?GoodsCode=26012654",
+    "bookingLinks": [
+      {
+        "name": "놀유니버스",
+        "url": "http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?GoodsCode=26012654"
+      }
+    ],
+    "runtime": "1시간 30분",
+    "age": "36개월 이상",
+    "city": "Incheon",
+    "cityKo": "인천"
+  },
+  {
+    "id": "PF287889",
+    "nameKo": "세심굿: 응공이 이야기 [대전]",
+    "nameEn": "Sesim-gut: The Story of Eunggong-i [Daejeon]",
+    "venueKo": "별별마당 우금치",
+    "venueEn": "Byeolbyeolmadang Ugeumchi",
+    "mapsQuery": "별별마당 우금치 대전",
+    "dateDisplay": "토요일 ~ 일요일(19:00)",
+    "isRecurring": true,
+    "from": "2026.04.19",
+    "to": "2026.12.19",
+    "showTime": "토요일 ~ 일요일(19:00)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF287889_260324_112128.jpg",
+    "price": 30000,
+    "priceText": "전석 30,000원",
+    "genreCode": "CCCC",
+    "genreEn": "Korean Traditional Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "http://playticket.co.kr/nav/detail.html?idx=4203",
+    "bookingLinks": [
+      {
+        "name": "플레이티켓",
+        "url": "http://playticket.co.kr/nav/detail.html?idx=4203"
+      }
+    ],
+    "runtime": "1시간 30분",
+    "age": "만 7세 이상",
+    "city": "Daejeon",
+    "cityKo": "대전"
+  },
+  {
+    "id": "PF300239",
+    "nameKo": "제7회 Brass BOB (브라스밥) 정기연주회, From Tradition to Color: 전통에서 색 (色) 으로 [대전]",
+    "nameEn": "7th Brass BOB Regular Concert — From Tradition to Color [Daejeon]",
+    "venueKo": "대전예술의전당",
+    "venueEn": "Daejeon Arts Center",
+    "mapsQuery": "대전예술의전당 대전",
+    "dateDisplay": "2026.09.23",
+    "isRecurring": false,
+    "from": "2026.09.23",
+    "to": "2026.09.23",
+    "showTime": "수요일(19:30)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF300239_260907_121638.gif",
+    "price": 20000,
+    "priceText": "전석 20,000원",
+    "genreCode": "CCCA",
+    "genreEn": "Classical Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?GoodsCode=26012361",
+    "bookingLinks": [
+      {
+        "name": "놀유니버스",
+        "url": "http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?GoodsCode=26012361"
+      }
+    ],
+    "runtime": "1시간 15분",
+    "age": "만 7세 이상",
+    "city": "Daejeon",
+    "cityKo": "대전"
+  },
+  {
+    "id": "PF300956",
+    "nameKo": "소프라노 박지영 & 피아니스트 양기훈 듀오 리사이틀 [대전]",
+    "nameEn": "Soprano Park Ji-young & Pianist Yang Ki-hoon Duo Recital [Daejeon]",
+    "venueKo": "복합문화공간 플랜에이",
+    "venueEn": "Plan A Culture Space",
+    "mapsQuery": "복합문화공간 플랜에이 대전",
+    "dateDisplay": "2026.09.30",
+    "isRecurring": false,
+    "from": "2026.09.30",
+    "to": "2026.09.30",
+    "showTime": "수요일(19:30)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF300956_260915_113115.gif",
+    "price": 20000,
+    "priceText": "전석 20,000원",
+    "genreCode": "CCCA",
+    "genreEn": "Classical Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?GoodsCode=26013300",
+    "bookingLinks": [
+      {
+        "name": "놀유니버스",
+        "url": "http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?GoodsCode=26013300"
+      }
+    ],
+    "runtime": "1시간 30분",
+    "age": "만 7세 이상",
+    "city": "Daejeon",
+    "cityKo": "대전"
+  },
+  {
+    "id": "PF294541",
+    "nameKo": "대전예술의전당 회원음악회, 후지타 마오 피아노 리사이틀",
+    "nameEn": "Daejeon Arts Center Members' Concert: Mao Fujita Piano Recital",
+    "venueKo": "대전예술의전당",
+    "venueEn": "Daejeon Arts Center",
+    "mapsQuery": "대전예술의전당 대전",
+    "dateDisplay": "2026.09.30",
+    "isRecurring": false,
+    "from": "2026.09.30",
+    "to": "2026.09.30",
+    "showTime": "수요일(19:30)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF294541_260624_134042.gif",
+    "price": 50000,
+    "priceText": "R석 70,000원, S석 50,000원",
+    "genreCode": "CCCA",
+    "genreEn": "Classical Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?GoodsCode=26008257",
+    "bookingLinks": [
+      {
+        "name": "놀유니버스",
+        "url": "http://ticket.interpark.com/Ticket/Goods/GoodsInfo.asp?GoodsCode=26008257"
+      }
+    ],
+    "runtime": "1시간 5분",
+    "age": "만 7세 이상",
+    "city": "Daejeon",
+    "cityKo": "대전"
+  },
+  {
+    "id": "PF299507",
+    "nameKo": "크리스토퍼 에센바흐 & KBS 교향악단, 말러 교향곡 제2번 C단조: 부활 (영상화) [울산]",
+    "nameEn": "Eschenbach & KBS Symphony: Mahler Symphony No.2 'Resurrection' (screening) [Ulsan]",
+    "venueKo": "울산중구문화의전당",
+    "venueEn": "Ulsan Jung-gu Culture & Arts Center",
+    "mapsQuery": "울산중구문화의전당 울산",
+    "dateDisplay": "2026.09.29",
+    "isRecurring": false,
+    "from": "2026.09.29",
+    "to": "2026.09.29",
+    "showTime": "화요일(19:30)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF299507_260827_132958.jpg",
+    "price": 0,
+    "priceText": "전석무료",
+    "genreCode": "CCCA",
+    "genreEn": "Classical Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "https://artscenter.junggu.ulsan.kr/01_Menu/01_view.do?prcValue=P0001844&searchCat1=PFMANC",
+    "bookingLinks": [
+      {
+        "name": "울산중구문화의전당",
+        "url": "https://artscenter.junggu.ulsan.kr/01_Menu/01_view.do?prcValue=P0001844&searchCat1=PFMANC"
+      }
+    ],
+    "runtime": "1시간 30분",
+    "age": "만 7세 이상",
+    "city": "Ulsan",
+    "cityKo": "울산"
+  },
+  {
+    "id": "PF300024",
+    "nameKo": "8시 클래식 울주, 색소포니스트 윤여민과 친구들의 The Song of Ulju",
+    "nameEn": "8 O'Clock Classics Ulju: Yoon Yeo-min & Friends — The Song of Ulju",
+    "venueKo": "울주문화예술회관",
+    "venueEn": "Ulju Culture & Arts Center",
+    "mapsQuery": "울주문화예술회관 울산",
+    "dateDisplay": "2026.09.30",
+    "isRecurring": false,
+    "from": "2026.09.30",
+    "to": "2026.09.30",
+    "showTime": "수요일(20:00)",
+    "poster": "https://kopis.or.kr/upload/pfmPoster/PF_PF300024_260903_111906.jpg",
+    "price": 10000,
+    "priceText": "전석 10,000원",
+    "genreCode": "CCCA",
+    "genreEn": "Classical Music",
+    "noKoreanNeeded": true,
+    "bookingUrl": "https://www.ucf.or.kr:478/culturearts/pe_detail.html?pfmIng=1&p_idx=1669",
+    "bookingLinks": [
+      {
+        "name": "울주문화예술회관(울주문화재단)",
+        "url": "https://www.ucf.or.kr:478/culturearts/pe_detail.html?pfmIng=1&p_idx=1669"
+      }
+    ],
+    "runtime": "1시간",
+    "age": "만 7세 이상",
+    "city": "Ulsan",
+    "cityKo": "울산"
   }
 ]
