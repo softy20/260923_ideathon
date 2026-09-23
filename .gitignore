@@ -1,3 +1,7 @@
 .env
+node_modules/
+.next/
+.vercel/
+scripts/output/
 docs/guide/
 
