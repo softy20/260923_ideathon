@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 import PerformanceCard from "../components/PerformanceCard";
 import Pagination from "../components/Pagination";
 import BackToTop from "../components/BackToTop";
@@ -12,7 +14,12 @@ import {
 } from "../lib/performances";
 import { UI, genreNameForCode } from "../lib/i18n";
 
+const VISITED_KEY = "stagepass_visited";
+
 const PAGE_SIZE = 12;
+// 이 값(px)보다 더 내려가면 모바일 필터 패널을 자동으로 접고, 맨 위 근처로
+// 돌아오면 다시 펼친다. (데스크톱/태블릿에서는 패널이 항상 펼쳐진 채라 영향 없음)
+const AUTO_COLLAPSE_SCROLL_Y = 60;
 
 function toInputDate(d) {
   const y = d.getFullYear();
@@ -38,8 +45,24 @@ export default function HomePage() {
   const [genre, setGenre] = useState("");
   const [lang, setLang] = useState("en");
   const [page, setPage] = useState(1);
+  const [filtersOpen, setFiltersOpen] = useState(true);
   const t = UI[lang];
   const resultsTopRef = useRef(null);
+  const router = useRouter();
+
+  // 처음 방문한 사람은 소개 페이지(/about)를 먼저 보여준다.
+  // localStorage에 방문 기록이 없을 때만, 그리고 한 번만 리다이렉트한다.
+  useEffect(() => {
+    let visited = true;
+    try {
+      visited = localStorage.getItem(VISITED_KEY) === "1";
+    } catch {
+      // localStorage를 못 쓰면(프라이빗 브라우징 등) 그냥 메인을 보여줌
+    }
+    if (!visited) {
+      router.replace("/about");
+    }
+  }, [router]);
 
   const cities = useMemo(() => getAvailableCities(), []);
   const genres = useMemo(() => getAvailableGenres(), []);
@@ -58,10 +81,33 @@ export default function HomePage() {
     setPage(1);
   }, [startDate, endDate, noKoreanNeeded, city, genre]);
 
+  // 스크롤을 내리면 필터 패널을 자동으로 접고, 맨 위 근처로 오면 다시 편다.
+  useEffect(() => {
+    function onScroll() {
+      setFiltersOpen(window.scrollY < AUTO_COLLAPSE_SCROLL_Y);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   function goToPage(n) {
     setPage(n);
     resultsTopRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
+
+  // 모바일에서 필터를 접었을 때 한 줄로 보여줄 현재 조건 요약
+  const shortDate = (s) => (s ? s.slice(5).replace("-", ".") : "");
+  const cityLabel = cities.find((c) => c.city === city);
+  const genreInfo = genres.find((g) => g.code === genre);
+  const filterSummary = [
+    `${shortDate(startDate)}–${shortDate(endDate)}`,
+    cityLabel && (lang === "ko" ? cityLabel.cityKo : cityLabel.city),
+    genreInfo && genreNameForCode(genreInfo.code, genreInfo.genreEn, lang),
+    noKoreanNeeded && t.noKoreanNeeded,
+  ]
+    .filter(Boolean)
+    .join(" · ");
 
   function resetFilters() {
     setStartDate(toInputDate(today));
@@ -76,27 +122,51 @@ export default function HomePage() {
       <header className="header">
         <div className="header-top">
           <h1>Stage Pass Korea</h1>
-          <div role="group" aria-label="Language" className="lang-switch">
-            <button
-              type="button"
-              aria-pressed={lang === "en"}
-              onClick={() => setLang("en")}
-            >
-              English
-            </button>
-            <button
-              type="button"
-              aria-pressed={lang === "ko"}
-              onClick={() => setLang("ko")}
-            >
-              한국어
-            </button>
+          <div className="header-actions">
+            <div role="group" aria-label="Language" className="lang-switch">
+              <button
+                type="button"
+                aria-pressed={lang === "en"}
+                onClick={() => setLang("en")}
+              >
+                English
+              </button>
+              <button
+                type="button"
+                aria-pressed={lang === "ko"}
+                onClick={() => setLang("ko")}
+              >
+                한국어
+              </button>
+            </div>
+            <Link href="/about" className="reopen-about" aria-label="About this site" title="About this site">
+              ?
+            </Link>
           </div>
         </div>
         <p className="tagline">{t.tagline}</p>
       </header>
 
       <section className="search-bar">
+        <button
+          type="button"
+          className="filter-toggle"
+          aria-expanded={filtersOpen}
+          aria-controls="filter-fields"
+          onClick={() => setFiltersOpen((v) => !v)}
+        >
+          <span className="filter-toggle-label">{t.filters}</span>
+          <span className="filter-toggle-summary">{filterSummary}</span>
+          <span className="filter-toggle-icon" aria-hidden="true">
+            ▾
+          </span>
+        </button>
+
+        <div
+          id="filter-fields"
+          className={`filter-collapse${filtersOpen ? "" : " is-collapsed"}`}
+        >
+        <div className="filter-collapse-inner">
         <div className="field">
           <label htmlFor="start">{t.fieldFrom}</label>
           <input
@@ -156,6 +226,8 @@ export default function HomePage() {
             <span className="toggle-track" aria-hidden="true" />
           </span>
         </label>
+        </div>
+        </div>
       </section>
 
       <p className="result-count" ref={resultsTopRef}>
