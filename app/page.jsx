@@ -1,7 +1,9 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import PerformanceCard from "../components/PerformanceCard";
+import Pagination from "../components/Pagination";
+import BackToTop from "../components/BackToTop";
 import {
   filterPerformances,
   getAllPerformances,
@@ -9,6 +11,8 @@ import {
   getAvailableGenres,
 } from "../lib/performances";
 import { UI, genreNameForCode } from "../lib/i18n";
+
+const PAGE_SIZE = 12;
 
 function toInputDate(d) {
   const y = d.getFullYear();
@@ -20,6 +24,12 @@ function toInputDate(d) {
 export default function HomePage() {
   const today = useMemo(() => new Date(), []);
   const weekLater = useMemo(() => new Date(Date.now() + 7 * 86400000), []);
+  // KOPIS API 한 번 호출 최대 31일 제한에 맞춰 실제로 데이터가 있는 범위만 선택 가능하게 함
+  const minSelectableDate = useMemo(() => toInputDate(today), [today]);
+  const maxSelectableDate = useMemo(
+    () => toInputDate(new Date(Date.now() + 31 * 86400000)),
+    []
+  );
 
   const [startDate, setStartDate] = useState(toInputDate(today));
   const [endDate, setEndDate] = useState(toInputDate(weekLater));
@@ -27,12 +37,31 @@ export default function HomePage() {
   const [city, setCity] = useState("");
   const [genre, setGenre] = useState("");
   const [lang, setLang] = useState("en");
+  const [page, setPage] = useState(1);
   const t = UI[lang];
+  const resultsTopRef = useRef(null);
 
   const cities = useMemo(() => getAvailableCities(), []);
   const genres = useMemo(() => getAvailableGenres(), []);
   const total = getAllPerformances().length;
   const results = filterPerformances({ startDate, endDate, noKoreanNeeded, city, genre });
+
+  const totalPages = Math.max(1, Math.ceil(results.length / PAGE_SIZE));
+  const currentPage = Math.min(page, totalPages);
+  const pageResults = results.slice(
+    (currentPage - 1) * PAGE_SIZE,
+    currentPage * PAGE_SIZE
+  );
+
+  // 필터가 바뀌면 결과 목록이 달라지니 항상 1페이지로 되돌린다.
+  useEffect(() => {
+    setPage(1);
+  }, [startDate, endDate, noKoreanNeeded, city, genre]);
+
+  function goToPage(n) {
+    setPage(n);
+    resultsTopRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 
   function resetFilters() {
     setStartDate(toInputDate(today));
@@ -74,6 +103,8 @@ export default function HomePage() {
             id="start"
             type="date"
             value={startDate}
+            min={minSelectableDate}
+            max={maxSelectableDate}
             onChange={(e) => setStartDate(e.target.value)}
           />
         </div>
@@ -83,6 +114,8 @@ export default function HomePage() {
             id="end"
             type="date"
             value={endDate}
+            min={minSelectableDate}
+            max={maxSelectableDate}
             onChange={(e) => setEndDate(e.target.value)}
           />
         </div>
@@ -125,7 +158,7 @@ export default function HomePage() {
         </label>
       </section>
 
-      <p className="result-count">
+      <p className="result-count" ref={resultsTopRef}>
         {lang === "ko" ? (
           <>
             전체 {total}건 중 <strong>{results.length}건</strong> 표시
@@ -147,11 +180,20 @@ export default function HomePage() {
           </button>
         </div>
       ) : (
-        <div className="card-grid">
-          {results.map((p) => (
-            <PerformanceCard key={p.id} performance={p} lang={lang} />
-          ))}
-        </div>
+        <>
+          <div className="card-grid">
+            {pageResults.map((p) => (
+              <PerformanceCard key={p.id} performance={p} lang={lang} />
+            ))}
+          </div>
+          <Pagination
+            page={currentPage}
+            totalPages={totalPages}
+            onChange={goToPage}
+            prevLabel={t.prevPage}
+            nextLabel={t.nextPage}
+          />
+        </>
       )}
 
       <footer className="footer">
@@ -162,6 +204,8 @@ export default function HomePage() {
           </a>
         </p>
       </footer>
+
+      <BackToTop />
     </div>
   );
 }
