@@ -292,7 +292,7 @@ select:focus-visible {
   .toggle {
     gap: 6px;
     font-size: 12px;
-    margin-left: 0;
+    margin-left: auto;
   }
 
   .toggle-control {
@@ -326,6 +326,46 @@ select:focus-visible {
   .lang-switch button {
     padding: 0 6px;
     font-size: 11px;
+  }
+}
+
+/* iPad-ish widths — shrink the filter bar's controls just enough that
+   From/To/City/Genre/toggle all stay on one row instead of wrapping. */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .search-bar {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .field {
+    font-size: 12px;
+    gap: 4px;
+  }
+
+  .field input,
+  .field select {
+    height: 40px;
+    padding: 0 10px;
+    font-size: 13px;
+  }
+
+  .toggle {
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .toggle-control {
+    width: 34px;
+    height: 20px;
+  }
+
+  .toggle-track::before {
+    width: 14px;
+    height: 14px;
+  }
+
+  .toggle-input:checked + .toggle-track::before {
+    transform: translateX(14px);
   }
 }
 
