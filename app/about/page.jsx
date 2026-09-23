@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ABOUT, UI } from "../../lib/i18n";
+import { ABOUT, UI, readSavedLang, saveLang } from "../../lib/i18n";
 import performances from "../../data/performances.json";
 
 const VISITED_KEY = "stagepass_visited";
@@ -63,6 +63,15 @@ function markVisited() {
 
 export default function AboutPage() {
   const [lang, setLang] = useState("en");
+  // /about과 /가 언어를 공유함 — 마운트 후 저장된 값이 있으면 그걸로 바꾼다.
+  useEffect(() => {
+    const saved = readSavedLang();
+    if (saved) setLang(saved);
+  }, []);
+  function changeLang(l) {
+    setLang(l);
+    saveLang(l);
+  }
   // 첫 렌더(서버/클라이언트 hydration)는 항상 같은 결과가 나와야 하므로 고르게 뽑은
   // 목록으로 시작하고, 마운트된 뒤에만 무작위로 다시 섞는다(방문할 때마다 살짝 다르게).
   const [heroPosters, setHeroPosters] = useState(() =>
@@ -94,10 +103,10 @@ export default function AboutPage() {
             <div className="header-top">
               <h1>Stage Pass Korea</h1>
               <div role="group" aria-label="Language" className="lang-switch lang-switch-on-dark">
-                <button type="button" aria-pressed={lang === "en"} onClick={() => setLang("en")}>
+                <button type="button" aria-pressed={lang === "en"} onClick={() => changeLang("en")}>
                   English
                 </button>
-                <button type="button" aria-pressed={lang === "ko"} onClick={() => setLang("ko")}>
+                <button type="button" aria-pressed={lang === "ko"} onClick={() => changeLang("ko")}>
                   한국어
                 </button>
               </div>

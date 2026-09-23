@@ -13,7 +13,7 @@ import {
   getAvailableCities,
   getAvailableGenres,
 } from "../lib/performances";
-import { UI, genreNameForCode } from "../lib/i18n";
+import { UI, genreNameForCode, readSavedLang, saveLang } from "../lib/i18n";
 
 const VISITED_KEY = "stagepass_visited";
 const TUTORIAL_SEEN_KEY = "stagepass_tutorial_seen";
@@ -58,6 +58,9 @@ export default function HomePage() {
   // 방문 기록이 있다면(또는 /about에서 "Start the tour"로 넘어온 거라면) 포커스
   // 튜토리얼을 아직 안 봤을 때 바로 띄운다.
   useEffect(() => {
+    const savedLang = readSavedLang();
+    if (savedLang) setLang(savedLang);
+
     let visited = true;
     try {
       visited = localStorage.getItem(VISITED_KEY) === "1";
@@ -81,6 +84,11 @@ export default function HomePage() {
       setTutorialActive(true);
     }
   }, [router]);
+
+  function changeLang(l) {
+    setLang(l);
+    saveLang(l);
+  }
 
   function closeTutorial() {
     setTutorialActive(false);
@@ -157,14 +165,14 @@ export default function HomePage() {
               <button
                 type="button"
                 aria-pressed={lang === "en"}
-                onClick={() => setLang("en")}
+                onClick={() => changeLang("en")}
               >
                 English
               </button>
               <button
                 type="button"
                 aria-pressed={lang === "ko"}
-                onClick={() => setLang("ko")}
+                onClick={() => changeLang("ko")}
               >
                 한국어
               </button>
